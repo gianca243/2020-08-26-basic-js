@@ -1,0 +1,36 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;     
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(189, 243, 198);
+}
+.camposForm{
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+.camposForm >input{
+    background-color: rgb(163, 226, 17);
+}
+.formContacto{
+    width: 40%;
+    margin: auto;
+    margin-top: 50px;
+}
+div.camposForm>label{
+    margin-bottom: 10px;
+}
+.alert{
+    background-color: rgb(185, 99, 99);
+}
+.mensajeAlerta{
+    color: firebrick;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.hide{
+    display: none;
+}

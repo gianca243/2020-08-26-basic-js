@@ -1,4 +1,4 @@
-var nombre = "Nombre apellido"
+/*var nombre = "Nombre apellido"
 nombre ="elsa capuntas"
 console.log(nombre)
 var global = 0
@@ -78,4 +78,67 @@ switch (operacion) {
 
     default:
         break;
+}*/
+const inputName = document.getElementById('name')
+const inputLastName = document.getElementById('lastName')
+const inputEmail = document.getElementById('email')
+const inputNumber = document.getElementById('number')
+const nombreMensaje = document.getElementById("nombreMensaje")
+const nombreMensaje1 = document.getElementById("nombreMensaje1")
+const nombreMensaje2 = document.getElementById("nombreMensaje2")
+const nombreMensaje3 = document.getElementById("nombreMensaje3")
+
+function validarFormulario(){
+    event.preventDefault()
+	let validate = 0
+	let mensajeA =[]
+ if(inputName.value == ""){
+    inputName.classList.add("alert")
+		nombreMensaje.innerText='llena el campo por favor'	
+		mensajeA[0]=" nombre"	    
+ } else {
+     inputName.classList.remove('alert')
+		 nombreMensaje.innerText=''
+		 validate = validate+1
+ }
+ if(inputLastName.value == ""){
+    inputLastName.classList.add("alert")
+		nombreMensaje1.innerText='llena el campo por favor'
+		mensajeA[1]=" apellido"
+ } else {
+    inputLastName.classList.remove('alert')
+		nombreMensaje1.innerText=''
+		validate = validate+1
+ }
+ if (inputEmail.value == "") {
+     inputEmail.classList.add("alert")
+		 nombreMensaje2.innerText='llena el campo por favor'
+		 mensajeA[2]=" email"
+ } else {
+    inputEmail.classList.remove('alert')
+		nombreMensaje2.innerText=''
+		validate = validate+1
+ }
+ if (inputNumber.value == "") {
+    inputNumber.classList.add("alert")
+		nombreMensaje3.innerText='llena el campo por favor'
+		mensajeA[3]=" telefono"
+ } else {
+    inputNumber.classList.remove('alert')
+		nombreMensaje3.innerText=''
+		validate = validate+1
+ }
+ if (validate == 4 ) {
+	swal({
+		title: "Good job!",
+		text: "Formulario completado",
+		icon: "success",
+		button: "Continuar",
+	})
+		.then((value) => {
+			window.location = "./calculadora.html"
+		});		
+ } else {
+	swal("Espera...", "Faltan los siguientes campos:"+mensajeA.join(), "warning");
+ }
 }
