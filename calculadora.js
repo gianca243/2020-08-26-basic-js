@@ -12,26 +12,33 @@ operacion.addEventListener("click",()=>{
     //aritmetico remove    
     setA.classList.remove("hide")
     //obtencion de datos
-    let num1 = parseFloat(document.getElementById("num1").value)
-    let num2 = parseFloat(document.getElementById("num2").value)
+    
     //manejo eventos
     const suma = document.getElementById("suma")
     suma.addEventListener("click",()=>{
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
         let resultado = num1+num2
         respuesta.innerHTML = "<i>"+resultado+"</i>"
     })
     const resta = document.getElementById("resta")
     resta.addEventListener("click",()=>{
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
         let resultado = num1-num2
         respuesta.innerHTML = "<i>"+resultado+"</i>"
     })
     const multiplicacion = document.getElementById("multiplicacion")
     multiplicacion.addEventListener("click",()=>{
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
         let resultado = num1*num2
         respuesta.innerHTML = "<i>"+resultado+"</i>"
     })
     const division = document.getElementById("division")
     division.addEventListener("click",()=>{
+        let num1 = parseFloat(document.getElementById("num1").value)
+        let num2 = parseFloat(document.getElementById("num2").value)
         let resultado = num1/num2
         respuesta.innerHTML = "<i>"+resultado+"</i>"
     })
